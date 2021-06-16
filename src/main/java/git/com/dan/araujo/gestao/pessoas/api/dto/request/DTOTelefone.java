@@ -1,2 +1,28 @@
-package git.com.dan.araujo.gestao.pessoas.api.dto.request;public class DTOTelefone {
+package git.com.dan.araujo.gestao.pessoas.api.dto.request;
+
+import git.com.dan.araujo.gestao.pessoas.api.enums.TipoDeTelefone;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class DTOTelefone {
+
+    private Long id;
+
+    @Enumerated(EnumType.STRING)
+    private TipoDeTelefone tipoDeTelefone;
+
+    @NotEmpty
+    @Size(min = 13, max = 14)
+    private String numero;
 }
