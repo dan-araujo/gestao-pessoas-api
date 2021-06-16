@@ -1,6 +1,6 @@
 package git.com.dan.araujo.gestao.pessoas.api.entities;
 
-import git.com.dan.araujo.gestao.pessoas.api.enums.TipoTelefone;
+import git.com.dan.araujo.gestao.pessoas.api.enums.TipoDeTelefone;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,7 +21,7 @@ public class Telefone {
 
     @Enumerated
     @Column(name = "tipo", nullable = false)
-    private TipoTelefone tipo;
+    private TipoDeTelefone tipo;
 
     @Column(name = "numero", nullable = false)
     private String numero;
