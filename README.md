@@ -1,2 +1,2 @@
 # gestao-pessoas-api
- People Management API Project
+ Projeto API para grenciamento de pessoas
