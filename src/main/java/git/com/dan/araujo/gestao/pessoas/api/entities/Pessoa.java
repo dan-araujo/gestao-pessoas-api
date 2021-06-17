@@ -20,10 +20,10 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "primeiroNome", nullable = false)
+    @Column(nullable = false)
     private String primeiroNome;
 
-    @Column(name = "sobrenome",nullable = false)
+    @Column(nullable = false)
     private String sobrenome;
 
     @Column(nullable = false, unique = true)
