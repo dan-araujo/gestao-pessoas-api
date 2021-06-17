@@ -20,7 +20,7 @@ public class DTOTelefone {
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    private TipoDeTelefone tipoDeTelefone;
+    private TipoDeTelefone tipo;
 
     @NotEmpty
     @Size(min = 13, max = 14)
