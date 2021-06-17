@@ -17,33 +17,33 @@ import java.util.List;
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class ControllerPessoa {
 
-    private final ServicePessoa servicoPessoa;
+    private final ServicePessoa servicePessoa;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public DTORespostaDaMensagem criarPessoa(@RequestBody @Valid DTOPessoa dtoPessoa) {
-        return servicoPessoa.criarPessoa(dtoPessoa);
+        return servicePessoa.criarPessoa(dtoPessoa);
     }
 
     @GetMapping
     public List<DTOPessoa> listarTodos() {
-        return servicoPessoa.listarTodos();
+        return servicePessoa.listarTodos();
     }
 
     @GetMapping("/{id}")
     public DTOPessoa encontrarPorId(@PathVariable Long id) throws PessoaNaoEncontradaException {
-        return servicoPessoa.encontrarPorId(id);
+        return servicePessoa.encontrarPorId(id);
     }
 
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public DTORespostaDaMensagem atualizarPorId(@PathVariable Long id, @RequestBody @Valid DTOPessoa dtoPessoa) throws PessoaNaoEncontradaException {
-        return servicoPessoa.atualizarPorId(id, dtoPessoa);
+        return servicePessoa.atualizarPorId(id, dtoPessoa);
     }
 
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletarPorId(@PathVariable Long id) throws PessoaNaoEncontradaException {
-        servicoPessoa.deletar(id);
+        servicePessoa.deletar(id);
     }
 
 }
