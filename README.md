@@ -1,2 +1,2 @@
 # gestao-pessoas-api
- Projeto API para grenciamento de pessoas
+ Projeto API para gerenciamento de pessoas
